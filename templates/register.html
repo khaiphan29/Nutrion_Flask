@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h1>Register a new user</h1>
+{% if msg %}
+    <div class="alert alert-warning" role="alert">
+        {{msg}}
+    </div>
+{% endif %}
+<form action="/register" method="post">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="alert alert-warning" role="alert">
+        {{messages[0]}}
+    </div>
+    {% endif %}
+    {% endwith %}
+    <div class="form-group">
+        <input class="form-control" type="text" autocomplete="off" name="name" placeholder="Name">
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="email" autocomplete="off" name="email" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="password" autocomplete="off" name="password" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <select class="form-control" name="gender">
+            <option value="0" selected>Female</option>
+            <option value="1">Male</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="date" name="birthdate">
+    </div>
+    <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    
+}
+
+main {
+    margin: 10px;
+}
+
+.background-pink {
+    background-color: #F4BCD0;
+}
+
+.base-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: white;
+    border-bottom: 3px solid black;
+    box-sizing: border-box;
+}
+
+.nav-user {
+    font-weight: bolder;
+    font-size: large;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.nav-brand{
+    font-weight: bold;
+    font-size: large;
+    color: black;
+    padding: 10px;
+}
+
+.nav-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    font-weight: bold;
+    font-size: large;
+    color: black;
+    transition: background-color 0.2s ease;
+    transition-delay: 0s;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: rgb(121, 88, 39);
+}
+.nav-brand:hover {
+    color: rgb(121, 88, 39);
+    text-decoration: none;
+}
+
+.admin-mgmt{
+    display: flex;
+    justify-content: space-between;
+} 
+
+
+.middle-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset;
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    width: 100%;
+    background-color: none;
+}

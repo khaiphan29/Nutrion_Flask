@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block js %}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td scope="row">Height</td>
+                        <td>
+                            {% if height %}
+                                {{height.height}} cm
+                            {% else %}
+                                Please input height
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>
+                            {% if weight %}
+                                {{weight.weight}} kg
+                            {% else %}
+                                Please input height
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td>{{age}}</td>
+                    </tr>
+                    <tr>
+                        <td>TDEE (Moderate Exercise, Z=1,55)</td>
+                        <td>
+                            {% if tdee %}
+                                {{tdee}} calo per day
+                            {% else %}
+                                Insufficient information
+                            {% endif %}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col d-flex align-items-center flex-column">
+                <h2>Modification</h2>
+                <form action="/profile" method="post">
+                    <div class="form-group">
+                        <input type="number" name="height" placeholder="Height(cm)">
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="weight" placeholder="Weight(kg)">
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
